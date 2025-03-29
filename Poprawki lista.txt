@@ -1,0 +1,70 @@
+---Wywalić rezystor boot
+-Rezystor ILIM 5,6k
+--W twoich kondensatory wyjściowy przetwornicy 3.3V do masy 100u
+-x-Zmienić dławik zasilania ESP na większy
+--Zrobić 9 dużych otworów pod ESP do odprowadzania cyny
+-Zmienić rezystory dzialnika napięcia przetwornicy 3.3V by nie dawała 3.4V - 47k i 15k daje realnie 3,34V
+-Dodać mikro przycisk boot i reset
+-Dodać kondensatory na VDD_SPI 1u i 100n
+--Podłączyć drugą stronę USB C
+--Zmienić pin diod LED bo zielona jest powiązana z resetem
+--Na moich zmienić kierunek diody przeciw odwrotnej polaryzacji
+Umieścić diody w takich miejscach by było je widać od boku
+-Wywalić wszelkie odczyty z adc 2 bo nie wszystko działa
+-x-Dodać pomiary wszystkich napięć do kontroli stabilności i wykrywania zwarć
+-Dodać do wejść diody Zenera na 3,5V za rezystorem by chronić przed zbyt wysokim napięciem mikrokontroler
+---Na EFU dodać dzielnik napięcia przy driverach mosfet bo są na 1,8-2,2V--
+Dodać do FCCU lub EFU zwarcia ogniwa przy przedmuchu
+Sprawdzić możliwość sterowania mosfet elektrozaworów by ograniczać pobór energii gdy zawór się otworzy
+-Dodać pomiary czujników w ogniwie i redaktorze Spectronika
+-x-EFU ma zamienione kierunki diod przy rezystorach bramkowych tranzystorów przetwornicy!
+Diody sygnalizacyjne na zworkach goldpin do wszystkiych wyjsc i napiec
+--Przyciski sterujace ogniwem FCCU
+Mosfet zwarciowy 
+Odłaczenie przetwornicy lub dwa mosfety właczajace z driverem
+-- Wifi ceramiczne
+-- Kryształ 32kHz
+--SC i FC i 12V do zasilania
+
+
+
+
+Braki
+- przetwornica 5V - LDO 1117
+- rozmieszczenie wtyczek 
+- ADC i2c 4 kanaly z wzmocnieniem
+- driver x2
+
+
+
+- Piny wentylatora wtyczki?
+- Dobór sygnałów wtyczek
+- Czy wykorzystać do czegoś dodatkowego opamp z temperaturą i ciśnieniem?
+- Czy zamiast drugiego ciśnienia ADC mierzy słabszą cele ogniwa?
+
+
+
+
+
+
+Ogniwo
+1. FAN ON
+2. Fan pwm
+3. Tacho - zener
+4. Temperatura opamp
+5. Cisnienie x2 0-5V chyba wszystkie ADC, opamp Analog
+6. i2c x2
+7. FC_U opamp
+8. FC_C - ADC
+9. FC_Current_PWM driver
+10. FC_Short driver
+
+11. SC_Voltage_G5 opamp
+12. U1_Voltage_G6 plytki ogniwa
+13. USB_Voltage_
+
+15. SPI 3pin
+16. CAN 3pin
+
+17. Button/Car_speed zener
+

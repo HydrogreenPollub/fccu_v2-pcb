@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS1015IDGSR
+D 12-Bit, 3.3kSPS, 4-Ch Delta-Sigma ADC With PGA, Oscillator, VREF, Comparator and I2C Interface
+K
+F http://www.ti.com/lit/gpn/ADS1015
+$ENDCMP
+#
+#End Doc Library
